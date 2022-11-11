@@ -1,0 +1,91 @@
+# Package Overview
+package_name: classification_model
+
+# Data Files
+training_data_file: campaign.csv
+test_data_file: test_set.csv
+
+# The variable we are attempting to predict
+target: Response
+
+pipeline_name: classification_model
+pipeline_save_file: classification_model_output_v
+
+model_name: knn_model
+model_save_file: knn_model_output_v
+
+# set train/test split
+test_size: 0.2
+
+# to set the random seed
+random_state: 0
+
+# number of nearest neighbors
+n_neighbors: 5
+
+dropped_in_split:
+  - ID
+  - Response
+
+features:
+  - Year_Birth
+  - Education
+  - Marital_Status
+  - Income
+  - Kidhome
+  - Teenhome
+  - Dt_Customer
+  - Recency
+  - MntWines
+  - MntFruits
+  - MntMeatProducts
+  - MntFishProducts
+  - MntSweetProducts
+  - MntGoldProds
+  - NumDealsPurchases
+  - NumWebPurchases
+  - NumCatalogPurchases
+  - NumStorePurchases
+  - NumWebVisitsMonth
+  - AcceptedCmp3
+  - AcceptedCmp4
+  - AcceptedCmp5
+  - AcceptedCmp1
+  - AcceptedCmp2
+  - Complain
+  - Z_CostContact
+  - Z_Revenue
+
+missing_vals:
+  - Income
+
+date_var:
+  - Dt_Customer
+
+year_var:
+  - Year_Birth
+
+non_binary:
+  - Education
+  - Marital_Status
+
+scaled_vars:
+  - Year_Birth
+  - Education
+  - Marital_Status
+  - Income
+  - Dt_Customer
+  - Recency
+  - MntWines
+  - MntFruits
+  - MntMeatProducts
+  - MntFishProducts
+  - MntSweetProducts
+  - MntGoldProds
+  - NumDealsPurchases
+  - NumWebPurchases
+  - NumCatalogPurchases
+  - NumStorePurchases
+  - NumWebVisitsMonth
+
+current_year: 2022
