@@ -105,7 +105,6 @@ workflows:
   version: 2
   pipeline:
     jobs:
-      - model_tests
       - app_tests
       - deploy_app_container_in_heroku:
           requires:
