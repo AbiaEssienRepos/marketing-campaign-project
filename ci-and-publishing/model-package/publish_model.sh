@@ -2,8 +2,7 @@
 
 # Building packages and uploading them to a Gemfury repository
 
-#GEMFURY_URL=$GEMFURY_PUSH_URL
-GEMFURY_URL=https://4UcUBEYSCtns6oqXhwTv:@pypi.fury.io/theabiaessien/
+GEMFURY_URL=$GEMFURY_PUSH_URL
 
 set -e
 
